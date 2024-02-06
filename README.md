@@ -22,7 +22,7 @@ sudo dnf -y install ninja-build cmake gcc make unzip gettext curl
 sudo pacman -S base-devel cmake unzip ninja curl
 ```
 
-Clone neovim repo somewhere on system
+### Clone neovim repo somewhere on system
 ```
 git clone https://github.com/neovim/neovim
 ```
@@ -46,5 +46,5 @@ rm -rf ~/.local/share/nvim
 
 Install new config
 ```
-git clone https://github.com/m1kkY8/nvimrc ~/.config/nvim --depth 1 && nvim
+git clone https://github.com/m1kkY8/nvimrc ~/.config/nvim && nvim
 ```
