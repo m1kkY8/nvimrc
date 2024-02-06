@@ -48,3 +48,16 @@ Install new config
 ```
 git clone https://github.com/m1kkY8/nvimrc ~/.config/nvim && nvim
 ```
+
+# Installing LSP
+
+Make sure to hava npm and nodejs installed
+
+On Arch
+```
+sudo pacman -S nodejs npm
+```
+
+Open nvim and ```:Mason``` select LSP and (i)nstall it
+
+For clang LSP make sure to have clang and clangd installed
