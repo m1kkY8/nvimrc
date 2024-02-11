@@ -11,6 +11,7 @@ return {
             config.setup({
                 ensure_installed = {"c", "lua"},
                 auto_install = true,
+                ignore_install = {"gitcommit"},
                 highlight = { enable = true },
                 indent = { enable = true },
 

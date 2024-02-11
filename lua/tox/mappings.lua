@@ -3,8 +3,8 @@ local key = vim.keymap
 
 key.set("n", "<leader>h", vim.cmd.Ex)
 
-key.set("n", "<C-s>", "<cmd> w <CR>")
-key.set("i", "<C-s>", "<Esc><cmd> w <CR>")
+key.set("n", "<C-s>", "<cmd> wa <CR>")
+key.set("i", "<C-s>", "<Esc><cmd> wa <CR>")
 
 key.set("v", "J", ":m '>+1<CR>gv=gv")
 key.set("v", "K", ":m '<-2<CR>gv=gv")
