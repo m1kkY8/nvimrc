@@ -4,5 +4,4 @@ return {
     {'tpope/vim-fugitive'},
     {'tpope/vim-rhubarb'},
     {"folke/neodev.nvim"},
-    {"folke/which-key.nvim"},
 }
