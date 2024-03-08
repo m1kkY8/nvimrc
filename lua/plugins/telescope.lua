@@ -13,5 +13,9 @@ return {
         vim.keymap.set('n', '<leader>fb', function() builtin.buffers() end)
         vim.keymap.set('n', '<leader>fh', function() builtin.help_tags() end)
         vim.keymap.set('n', '<leader>st', function() builtin.git_status() end)
+
+        vim.keymap.set('n', '<leader>sn', function ()
+            builtin.find_files { cwd = vim.fn.stdpath 'config' }
+        end)
     end
 }
