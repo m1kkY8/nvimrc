@@ -22,5 +22,10 @@ vim.opt.scrolloff = 8
 vim.opt.updatetime = 50
 
 -- remove netrw banner
-vim.g.netrw_banner_split = 0
-vim.g.netrw_banner = 0
+--vim.g.netrw_banner_split = 0
+--vim.g.netrw_banner = 0
+
+-- disable netrw at the very start of your init.lua
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+

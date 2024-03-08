@@ -1,6 +1,6 @@
 return {
     'nvim-telescope/telescope.nvim',
-    even = 'VimEnter',
+    event = 'VimEnter',
     branch = '0.1.x',
     dependencies = {
         'nvim-lua/plenary.nvim',

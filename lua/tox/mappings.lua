@@ -1,29 +1,28 @@
--- remaps 
-local key = vim.keymap
+-- remaps
+local key = vim.keymap.set
 
-key.set("n", "<leader>h", vim.cmd.Ex)
+key("n", "<leader>h", vim.cmd.NvimTreeToggle)
+key("n", "<leader>f", vim.cmd.NvimTreeFocus)
 
-key.set("n", "<C-s>", "<cmd> wa <CR>")
-key.set("i", "<C-s>", "<Esc><cmd> wa <CR>")
+key("n", "<C-s>", "<cmd> wa <CR>")
+key("i", "<C-s>", "<Esc><cmd> wa <CR>")
 
-key.set("v", "J", ":m '>+1<CR>gv=gv")
-key.set("v", "K", ":m '<-2<CR>gv=gv")
+key("v", "J", ":m '>+1<CR>gv=gv")
+key("v", "K", ":m '<-2<CR>gv=gv")
 
-key.set("n", "J", "mzJ`z")
-key.set("n", "<C-d>", "<C-d>zz")
-key.set("n", "<C-u>", "<C-u>zz")
-key.set("n", "n", "nzzzv")
-key.set("n", "N", "Nzzzv")
+key("n", "J", "mzJ`z")
+key("n", "<C-d>", "<C-d>zz")
+key("n", "<C-u>", "<C-u>zz")
+key("n", "n", "nzzzv")
+key("n", "N", "Nzzzv")
 
-key.set("x", "<leader>p", [["_dP]])
+key("x", "<leader>p", [["_dP]])
 
-key.set({"n", "v"}, "<leader>y", [["+y]])
-key.set("n", "<leader>Y", [["+Y]])
+key({ "n", "v" }, "<leader>y", [["+y]])
+key("n", "<leader>Y", [["+Y]])
 
-key.set({"n", "v"}, "<leader>d", [["_d]])
+key({ "n", "v" }, "<leader>d", [["_d]])
 
-key.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
-key.set("n", "<leader>f", vim.lsp.buf.format)
+key("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
-key.set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>")
-
+key("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>")
