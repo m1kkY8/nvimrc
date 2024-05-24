@@ -43,6 +43,6 @@ return {
                 winblend = 10,
                 previewer = false,
             })
-        end, { desc = '[/] Fuzzily search in current buffer' })
+        end)
     end
 }

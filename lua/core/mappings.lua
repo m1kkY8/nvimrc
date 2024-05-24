@@ -1,11 +1,14 @@
 -- remaps
 local key = vim.keymap.set
 
+key("n", "<Esc>", "<cmd>nohlsearch<CR>")
+
 key("n", "<leader>h", vim.cmd.NvimTreeToggle)
 key("n", "<leader>f", vim.cmd.NvimTreeFocus)
 
 key("n", "<C-s>", "<cmd> wa <CR>")
 key("i", "<C-s>", "<Esc><cmd> wa <CR>")
+key("i", "jj", "<Esc>")
 
 key("v", "J", ":m '>+1<CR>gv=gv")
 key("v", "K", ":m '<-2<CR>gv=gv")
@@ -21,9 +24,8 @@ key("n", "n", "nzzzv")
 key("n", "N", "Nzzzv")
 
 key("x", "<leader>p", [["_dP]])
-
-key({ "n", "v" }, "<leader>y", [["+y]])
 key("n", "<leader>Y", [["+Y]])
+key({ "n", "v" }, "<leader>y", [["+y]])
 
 key({ "n", "v" }, "<leader>d", [["_d]])
 
