@@ -32,9 +32,3 @@ vim.opt.splitbelow = false
 vim.opt.signcolumn = 'yes'
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
-
--- remove netrw banner
---vim.g.netrw_banner_split = 0
---vim.g.netrw_banner = 0
-
-

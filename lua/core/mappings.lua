@@ -10,8 +10,8 @@ key("n", "<C-s>", "<cmd> wa <CR>")
 key("i", "<C-s>", "<Esc><cmd> wa <CR>")
 key("i", "jj", "<Esc>")
 
-key("v", "J", ":m '>+1<CR>gv=gv")
-key("v", "K", ":m '<-2<CR>gv=gv")
+key("v", "J", ":m '>+1<CR>gv=gv", {silent=true})
+key("v", "K", ":m '<-2<CR>gv=gv", {silent=true})
 
 key("n", "sh", "<C-w>h")
 key("n", "sl", "<C-w>l")
