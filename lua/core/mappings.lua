@@ -3,8 +3,8 @@ local key = vim.keymap.set
 
 key("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
-key("n", "<leader>h", vim.cmd.NvimTreeToggle)
-key("n", "<leader>f", vim.cmd.NvimTreeFocus)
+--key("n", "<leader>h", vim.cmd.NvimTreeToggle)
+--key("n", "<leader>f", vim.cmd.NvimTreeFocus)
 
 key("n", "<C-s>", "<cmd> wa <CR>")
 key("i", "<C-s>", "<Esc><cmd> wa <CR>")
