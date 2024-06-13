@@ -10,8 +10,8 @@ key("n", "<C-s>", "<cmd> wa <CR>")
 key("i", "<C-s>", "<Esc><cmd> wa <CR>")
 key("i", "jj", "<Esc>")
 
-key("v", "J", ":m '>+1<CR>gv=gv", {silent=true})
 key("v", "K", ":m '<-2<CR>gv=gv", {silent=true})
+key("v", "J", ":m '>+1<CR>gv=gv", {silent=true})
 
 key("n", "sh", "<C-w>h")
 key("n", "sl", "<C-w>l")
@@ -31,4 +31,10 @@ key({ "n", "v" }, "<leader>d", [["_d]])
 
 key("n", "<leader>ra", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
+
 key("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>")
+
+-- vsplit and open terminal
+
+key("t", "<Esc>", "<C-\\><C-n>")
+
