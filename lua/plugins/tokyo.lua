@@ -5,10 +5,13 @@ return {
     config = function()
         local config = require("tokyonight")
         config.setup({
+
             transparent = true,
             terminal_colors = true,
-
             styles = {
+                comments = {italic = true},
+                keywords = {italic = true},
+
                 sidebars = "transparent",
                 floats = "transparent",
             }

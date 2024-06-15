@@ -34,3 +34,9 @@ vim.keymap.set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>")
 -- vsplit and open terminal
 vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")
 
+vim.keymap.set('i', '<C-j>', 'copilot#Accept("\\<CR>")', {
+    expr = true,
+    replace_keycodes = false,
+    silent = true
+})
+vim.g.copilot_no_tab_map = true
