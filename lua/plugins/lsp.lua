@@ -22,11 +22,11 @@ return {
 
     },
 
-    config = function ()
+    config = function()
         local lsp_zero = require('lsp-zero')
 
         lsp_zero.on_attach(function(client, bufnr)
-            local opts = {buffer = bufnr, remap = false}
+            local opts = { buffer = bufnr, remap = false }
             local map = vim.keymap.set
 
             map("n", "gd", function() vim.lsp.buf.definition() end, opts)
@@ -64,26 +64,25 @@ return {
         })
 
         local cmp = require('cmp')
-        local cmp_select = {behavior = cmp.SelectBehavior.Select}
+        local cmp_select = { behavior = cmp.SelectBehavior.Select }
 
         cmp.setup({
             sources = {
-                {name = 'path'},
+                { name = 'path' },
                 --{name = 'cmdline'},
-                {name = 'nvim_lsp'},
-                {name = 'nvim_lua'},
-                {name = 'luasnip', keyword_length = 2},
-                {name = 'buffer', keyword_length = 3},
+                { name = 'nvim_lsp' },
+                { name = 'nvim_lua' },
+                { name = 'luasnip', keyword_length = 2 },
+                { name = 'buffer',  keyword_length = 3 },
             },
             formatting = lsp_zero.cmp_format(),
             mapping = cmp.mapping.preset.insert({
                 ['<C-p>'] = cmp.mapping.select_prev_item(cmp_select),
                 ['<C-n>'] = cmp.mapping.select_next_item(cmp_select),
-                ['<CR>'] = cmp.mapping.confirm({ select = true}),
+                ['<CR>'] = cmp.mapping.confirm({ select = true }),
                 ['<C-Space>'] = cmp.mapping.complete(),
             }),
         })
-
     end
 
 }
