@@ -24,15 +24,17 @@ vim.keymap.set("n", "N", "Nzzzv")
 vim.keymap.set("x", "<leader>p", [["_dP]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
 vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
-
 --vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
 
+vim.keymap.set(
+  "n",
+  "<leader>ee",
+  "oif err != nil {<CR>}<Esc>Oreturn err<Esc>"
+)
 vim.keymap.set("n", "<leader>ra", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
-
 vim.keymap.set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>")
--- vsplit and open terminal
-vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")
 
+-- Currently not in use
 vim.keymap.set('i', '<C-k>', 'copilot#Accept("\\<CR>")', {
   expr = true,
   replace_keycodes = false,
