@@ -6,20 +6,20 @@ vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 vim.keymap.set("n", "<C-s>", "<cmd> w <CR>")
 vim.keymap.set("i", "<C-s>", "<Esc><cmd> w <CR>")
 vim.keymap.set("n", "<leader>q", "<cmd> q<CR>")
-vim.keymap.set("i", "jj", "<Esc>")
+vim.keymap.set("i", "jf", "<Esc>")
 
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { silent = true })
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", { silent = true })
-
-vim.keymap.set("n", "sh", "<C-w>h")
-vim.keymap.set("n", "sl", "<C-w>l")
-vim.keymap.set("n", "sL", "<C-w>L")
 
 vim.keymap.set("n", "J", "mzJ`z")
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
+
+vim.keymap.set("n", "sh", "<C-w>h")
+vim.keymap.set("n", "sl", "<C-w>l")
+vim.keymap.set("n", "sL", "<C-w>L")
 
 vim.keymap.set("x", "<leader>p", [["_dP]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
