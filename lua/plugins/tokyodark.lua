@@ -1,7 +1,7 @@
 return {
   "tiagovla/tokyodark.nvim",
   opts = {
-    transparent_background = true
+    transparent_background = false
     -- custom options here
   },
   config = function(_, opts)

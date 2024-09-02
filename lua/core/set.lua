@@ -32,3 +32,4 @@ vim.opt.splitbelow = false
 vim.opt.signcolumn = 'yes'
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
+vim.opt.guicursor = ""
