@@ -3,9 +3,11 @@ vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 --vim.keymap.set("n", "<leader>h", vim.cmd.NvimTreeToggle)
 --vim.keymap.set("n", "<leader>f", vim.cmd.NvimTreeFocus)
 
-vim.keymap.set("n", "<C-s>", "<cmd> w <CR>")
-vim.keymap.set("i", "<C-s>", "<Esc><cmd> w <CR>")
+vim.keymap.set("n", "<C-s>", "<cmd> wa <CR>")
+vim.keymap.set("i", "<C-s>", "<Esc><cmd> wa <CR>")
 vim.keymap.set("n", "<leader>q", "<cmd> q<CR>")
+vim.keymap.set("n", "<leader>lr", "<cmd> LspRestart<CR>")
+
 vim.keymap.set("i", "jf", "<Esc>")
 vim.keymap.set("n", ";", ":")
 

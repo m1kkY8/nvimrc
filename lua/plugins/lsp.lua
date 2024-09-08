@@ -49,7 +49,6 @@ return {
         "clangd",
         "gopls",
         "pyright",
-        "tsserver",
         "emmet_language_server",
         "html",
         "cssls",

@@ -23,7 +23,7 @@ return {
         lua = { "stylua" },
         c = { "clang-format" },
         cpp = { "clang-format" },
-        go = { "goimports", "gofmt" },
+        go = { "gofumpt", "goimports_reviser" },
         templ = { "templ" },
 
       },
