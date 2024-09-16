@@ -8,4 +8,7 @@ return {
       require('log-highlight').setup {}
     end,
   },
+  {
+    'ThePrimeagen/vim-be-good'
+  }
 }

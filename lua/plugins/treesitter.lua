@@ -11,7 +11,7 @@ return {
       ensure_installed = { "c", "lua" },
       sync_install = false,
       auto_install = true,
-      ignore_install = { "gitcommit" },
+      ignore_install = { "gitcommit", "nginx" },
       highlight = { enable = true },
       indent = { enable = true },
 

@@ -25,6 +25,7 @@ return {
         cpp = { "clang-format" },
         go = { "gofumpt", "goimports_reviser" },
         templ = { "templ" },
+        shell = { "shfmt" }
 
       },
       format_on_save = {
