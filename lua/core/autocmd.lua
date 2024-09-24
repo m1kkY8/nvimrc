@@ -32,3 +32,36 @@ vim.api.nvim_create_user_command("DiagnosticToggle", function()
     signs = not vt,
   }
 end, { desc = "toggle diagnostic" })
+
+
+-- Define global themes variable
+_G.themes = {
+  "tokyodark",
+  "rose-pine",
+  "catppuccin-mocha"
+}
+
+-- Global function to set colorscheme
+function _G.colors(number)
+  local scheme = themes[number]
+
+  if scheme then
+    vim.cmd("colorscheme " .. scheme)
+    vim.g.current_theme = number -- Save current theme index globally
+  else
+    print("Invalid theme")
+  end
+end
+
+-- Create a Vim command to call the colors function
+vim.api.nvim_create_user_command('Colors', function(opts)
+  local number = tonumber(opts.args) -- Convert argument to a number
+  colors(number)                     -- Call the global colors function with the number
+end, { nargs = 1 })                  -- Allow one argument
+
+-- Restore the last used theme on startup
+if vim.g.current_theme then
+  colors(vim.g.current_theme)
+else
+  colors(1) -- Default to the first theme if no theme is set
+end
