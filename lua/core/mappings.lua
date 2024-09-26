@@ -20,10 +20,6 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
--- vim.keymap.set("n", "dd", [["_dd]])
--- vim.keymap.set("n", "d", [["_d]])
--- vim.keymap.set("n", "D", [["_D]])
-
 vim.keymap.set(
   "n",
   "<leader>ee",
@@ -33,9 +29,3 @@ vim.keymap.set("n", "<leader>ra", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left>
 vim.keymap.set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>")
 
 -- Currently not in use
-vim.keymap.set('i', '<C-k>', 'copilot#Accept("\\<CR>")', {
-  expr = true,
-  replace_keycodes = false,
-  silent = true
-})
-vim.g.copilot_no_tab_map = true

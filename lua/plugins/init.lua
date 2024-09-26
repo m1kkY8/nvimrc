@@ -11,4 +11,7 @@ return {
   {
     'ThePrimeagen/vim-be-good'
   },
+  { 'j-hui/fidget.nvim', opts = {} },
+  { 'tpope/vim-fugitive' },
+  { 'tpope/vim-rhubarb' },
 }
