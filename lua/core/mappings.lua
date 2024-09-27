@@ -1,7 +1,5 @@
 -- remaps
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
---vim.keymap.set("n", "<leader>h", vim.cmd.NvimTreeToggle)
---vim.keymap.set("n", "<leader>f", vim.cmd.NvimTreeFocus)
 
 vim.keymap.set("n", "<C-s>", "<cmd> wa <CR>")
 vim.keymap.set("i", "<C-s>", "<Esc><cmd> wa <CR>")
@@ -19,6 +17,9 @@ vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
+
+vim.keymap.set("n", "<leader>h", ":Neotre toggle right<CR>", { silent = true })
+vim.keymap.set("n", "<leader>G", ":Neotre toggle git_status right<CR>", { silent = true })
 
 vim.keymap.set(
   "n",

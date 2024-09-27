@@ -11,6 +11,17 @@ return {
     end,
   },
 
+  {
+    "folke/tokyonight.nvim",
+    lazy = false,
+    priority = 1000,
+    config = function()
+      require("tokyodark").setup({
+        transparent = false
+      })
+    end
+  },
+
   -- Cyberdream
   {
     "scottmckendry/cyberdream.nvim",
