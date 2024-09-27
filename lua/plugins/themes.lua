@@ -35,6 +35,10 @@ return {
         borderless_telescope = true,
         extensions = {
           telescope = true,
+          lazy = true,
+          trouble = true,
+          cmp = true,
+          gitsigns = true
         },
       })
     end
