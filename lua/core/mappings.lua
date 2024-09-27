@@ -19,7 +19,7 @@ vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
 vim.keymap.set("n", "<leader>h", ":Neotre toggle right<CR>", { silent = true })
-vim.keymap.set("n", "<leader>G", ":Neotre toggle git_status right<CR>", { silent = true })
+vim.keymap.set("n", "<leader>G", ":Neotre toggle float git_status <CR>", { silent = true })
 
 vim.keymap.set(
   "n",
