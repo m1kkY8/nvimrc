@@ -32,14 +32,7 @@ return {
         transparent = true,
         italic_comments = true,
         hide_fillchars = false,
-        borderless_telescope = true,
-        extensions = {
-          telescope = true,
-          lazy = true,
-          trouble = true,
-          cmp = true,
-          gitsigns = true
-        },
+        borderless_telescope = false,
       })
     end
   }
