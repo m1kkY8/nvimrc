@@ -15,10 +15,16 @@ return {
     "folke/tokyonight.nvim",
     lazy = false,
     priority = 1000,
-    config = function()
-      require("tokyodark").setup({
-        transparent = false
-      })
+    opts = {
+      transparent = true,
+      style = "night",
+      styles = {
+        floats = "transparent",
+        sidebars = "transparent"
+      }
+    },
+    config = function(_, opts)
+      require("tokyonight").setup(opts)
     end
   },
 

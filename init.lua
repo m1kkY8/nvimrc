@@ -3,11 +3,9 @@ require("core/keybinds")
 require("core/autocmd")
 require("core/setopts")
 
-
 local themes = {
+  "tokyonight",
   "tokyodark",
-  "tokyonight-night",
   "cyberdream"
 }
-
-vim.cmd("colorscheme " .. themes[1])
+vim.cmd("colorscheme " .. themes[3])
