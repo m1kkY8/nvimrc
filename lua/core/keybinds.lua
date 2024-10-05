@@ -3,6 +3,7 @@ vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
 vim.keymap.set("n", "<C-s>", "<cmd> wa <CR>")
 vim.keymap.set("i", "<C-s>", "<Esc><cmd> wa <CR>")
+
 vim.keymap.set("n", "<leader>q", "<cmd> q<CR>")
 vim.keymap.set("n", "<leader>lr", "<cmd> LspRestart<CR>")
 
@@ -20,6 +21,7 @@ vim.keymap.set("n", "N", "Nzzzv")
 
 vim.keymap.set("n", "<leader>f", ":Neotre toggle right<CR>", { silent = true })
 vim.keymap.set("n", "<leader>h", ":Neotre toggle float git_status <CR>", { silent = true })
+vim.keymap.set("n", "<leader>md", ":MarkdownPreviewToggle <CR>", { silent = true })
 
 vim.keymap.set(
   "n",
