@@ -14,7 +14,7 @@ return {
         keymaps = {
           ["<C-s>"] = false,
           ["<C-h>"] = false,
-          ["<M-h>"] = "actions.select_split",
+          -- ["<M-h>"] = "actions.select_split",
         },
 
         view_options = {
