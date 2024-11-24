@@ -23,12 +23,6 @@ vim.keymap.set("n", "<leader>f", ":Neotre toggle right<CR>", { silent = true })
 vim.keymap.set("n", "<leader>h", ":Neotre toggle float git_status <CR>", { silent = true })
 vim.keymap.set("n", "<leader>md", ":MarkdownPreviewToggle <CR>", { silent = true })
 
-vim.keymap.set(
-  "n",
-  "<leader>ee",
-  "oif err != nil {<CR>}<Esc>Oreturn err<Esc>"
-)
+vim.keymap.set("n", "<leader>ee", "oif err != nil {<CR>}<Esc>Olog.Println(err)<Esc>")
 vim.keymap.set("n", "<leader>ra", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 vim.keymap.set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>")
-
--- Currently not in use

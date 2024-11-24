@@ -1,45 +1,70 @@
 return {
-  -- Tokyo dark
-  {
-    "tiagovla/tokyodark.nvim",
-    opts = {
-      transparent_background = true
-      -- custom options here
-    },
-    config = function(_, opts)
-      require("tokyodark").setup(opts) -- calling setup is optional
-    end,
-  },
+	-- nightfox
 
-  {
-    "folke/tokyonight.nvim",
-    lazy = false,
-    priority = 1000,
-    opts = {
-      transparent = true,
-      style = "night",
-      styles = {
-        floats = "transparent",
-        sidebars = "transparent"
-      }
-    },
-    config = function(_, opts)
-      require("tokyonight").setup(opts)
-    end
-  },
+	{
+		"EdenEast/nightfox.nvim",
+		config = function()
+			require("nightfox").setup({
+				options = {
+					styles = {
+						comments = "italic",
+						types = "italic,bold",
+						functions = "italic, bold",
+						keywords = "bold",
+					},
+				},
+			})
+		end,
+	}, -- lazy
 
-  -- Cyberdream
-  {
-    "scottmckendry/cyberdream.nvim",
-    lazy = false,
-    priority = 1000,
-    config = function()
-      require("cyberdream").setup({
-        transparent = true,
-        italic_comments = true,
-        hide_fillchars = false,
-        borderless_telescope = false,
-      })
-    end
-  }
+	-- Tokyo dark
+	{
+		"tiagovla/tokyodark.nvim",
+		opts = {
+			transparent_background = true,
+			-- custom options here
+		},
+		config = function(_, opts)
+			require("tokyodark").setup(opts) -- calling setup is optional
+		end,
+	},
+
+	{
+		"folke/tokyonight.nvim",
+		lazy = false,
+		priority = 1000,
+		opts = {
+			transparent = false,
+			style = "day",
+			styles = {
+				floats = "transparent",
+				sidebars = "transparent",
+				comments = { italic = true },
+				keywords = { italic = true },
+				functions = { italic = true },
+				variables = {},
+			},
+		},
+		config = function(_, opts)
+			require("tokyonight").setup(opts)
+		end,
+	},
+
+	-- Cyberdream
+	{
+		"scottmckendry/cyberdream.nvim",
+		lazy = false,
+		priority = 1000,
+		config = function()
+			require("cyberdream").setup({
+				theme = {
+					variant = "dark",
+				},
+				transparent = false,
+				italic_comments = true,
+				hide_fillchars = false,
+				borderless_telescope = false,
+			})
+		end,
+	},
 }
