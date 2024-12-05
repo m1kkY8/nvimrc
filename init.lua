@@ -4,8 +4,9 @@ require("core/autocmd")
 require("core/setopts")
 
 local themes = {
-	"carbonfox",
+	"dayfox",
 	"nightfox",
+	"carbonfox",
 	"duskfox",
 	"tokyonight",
 	"tokyodark",
