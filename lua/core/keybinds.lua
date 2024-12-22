@@ -6,7 +6,7 @@ set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 set("n", "<C-s>", "<cmd> wa <CR>")
 set("i", "<C-s>", "<Esc><cmd> wa <CR>")
 
-set("n", "<leader>q", "<cmd> q<CR>")
+set("n", "<leader>q", "<cmd> qa<CR>")
 set("n", "<leader>lr", "<cmd> LspRestart<CR>")
 
 set("i", "jf", "<Esc>")

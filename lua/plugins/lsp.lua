@@ -25,6 +25,7 @@ return {
       "ts_ls",
       "gopls",
       "pyright",
+      "bashls"
     }
 
 

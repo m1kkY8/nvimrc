@@ -6,8 +6,10 @@ return {
   -- use a release tag to download pre-built binaries
   version = '*',
   opts = {
-    keymap = { preset = 'enter' },
--- Displays a preview of the selected item on the current line
+    keymap = {
+      preset = 'enter',
+    },
+    -- Displays a preview of the selected item on the current line
 
     appearance = {
       use_nvim_cmp_as_default = true,
