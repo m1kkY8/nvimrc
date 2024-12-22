@@ -4,13 +4,11 @@ require("core/autocmd")
 require("core/setopts")
 
 local themes = {
-	"tokyonight",
-	"dayfox",
-	"cyberdream",
-	"tokyodark",
-	"dark_flat",
-	"carbonfox",
-	"nightfox",
-	"duskfox",
+  "nightfox",
+  "tokyonight",
+  "carbonfox",
+  "tokyodark",
+  "dayfox",
+  "duskfox",
 }
 vim.cmd("colorscheme " .. themes[1])

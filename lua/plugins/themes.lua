@@ -1,16 +1,4 @@
 return {
-	-- flat
-	--
-	{
-		"sekke276/dark_flat.nvim",
-		config = function()
-			require("dark_flat").setup({
-				transparent = true,
-				italics = true,
-			})
-		end,
-	},
-
 	-- nightfox
 
 	{
@@ -28,18 +16,6 @@ return {
 			})
 		end,
 	}, -- lazy
-
-	-- Tokyo dark
-	{
-		"tiagovla/tokyodark.nvim",
-		opts = {
-			transparent_background = true,
-			-- custom options here
-		},
-		config = function(_, opts)
-			require("tokyodark").setup(opts) -- calling setup is optional
-		end,
-	},
 
 	{
 		"folke/tokyonight.nvim",
@@ -59,24 +35,6 @@ return {
 		},
 		config = function(_, opts)
 			require("tokyonight").setup(opts)
-		end,
-	},
-
-	-- Cyberdream
-	{
-		"scottmckendry/cyberdream.nvim",
-		lazy = false,
-		priority = 1000,
-		config = function()
-			require("cyberdream").setup({
-				theme = {
-					variant = "dark",
-				},
-				transparent = false,
-				italic_comments = true,
-				hide_fillchars = false,
-				borderless_telescope = false,
-			})
 		end,
 	},
 }
