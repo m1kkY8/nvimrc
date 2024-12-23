@@ -10,20 +10,10 @@ return {
 
   config = function()
     require("telescope").setup({
-      pickers = {
-        find_files = {
-          theme = "ivy"
-        },
-      },
+      defaults = require("telescope.themes").get_ivy(),
       extensions = {
         fzf = {},
-        ["ui-select"] = {
-          require("telescope.themes").get_ivy {}
-        }
-      },
-
-      defaults = {
-        file_ignore_patterns = { ".git/" },
+        ["ui-select"] = {},
       },
     })
 
