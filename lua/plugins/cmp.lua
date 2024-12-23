@@ -8,8 +8,15 @@ return {
   opts = {
     keymap = {
       preset = 'enter',
+      ['<S-Tab>'] = { 'select_prev', 'snippet_backward', 'fallback' },
+      ['<Tab>'] = { 'select_next', 'snippet_forward', 'fallback' }
     },
-    -- Displays a preview of the selected item on the current line
+
+    completion = {
+      list = { selection = "manual" },
+      -- Displays a preview of the selected item on the current line
+      ghost_text = { enabled = true }
+    },
 
     appearance = {
       use_nvim_cmp_as_default = true,

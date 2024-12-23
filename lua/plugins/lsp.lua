@@ -25,7 +25,9 @@ return {
       "ts_ls",
       "gopls",
       "pyright",
-      "bashls"
+      "bashls",
+      "rust_analyzer",
+      "emmet_language_server",
     }
 
 

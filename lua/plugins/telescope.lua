@@ -23,7 +23,7 @@ return {
       },
     })
 
-    pcall(require("telescope").load_extension, "fzf")
+    require("telescope").load_extension("fzf")
 
     local builtin = require("telescope.builtin")
 
@@ -39,4 +39,6 @@ return {
       builtin.find_files({ cwd = vim.fn.stdpath("config") })
     end)
   end,
+
+  require "plugins.telescope.multi".setup()
 }
