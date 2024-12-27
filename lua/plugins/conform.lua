@@ -19,12 +19,11 @@ return {
 				markdown = { "prettier" },
 				graphql = { "prettier" },
 
-				python = { "isort", "black" },
+				python = { "black" },
 				lua = { "stylua" },
 				c = { "clang-format" },
 				cpp = { "clang-format" },
 				go = { "gofumpt", "goimports-reviser" },
-				templ = { "templ" },
 				shell = { "shfmt" },
 			},
 			format_on_save = {
