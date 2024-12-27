@@ -2,6 +2,7 @@
 local set = vim.keymap.set
 
 set("n", "<Esc>", "<cmd>nohlsearch<CR>")
+set("n", "<leader>so", "<cmd>source %<CR>")
 
 set("n", "<C-s>", "<cmd> wa <CR>")
 set("i", "<C-s>", "<Esc><cmd> wa <CR>")
