@@ -22,7 +22,7 @@ return {
 		lazy = false,
 		priority = 1000,
 		opts = {
-			transparent = true,
+			transparent = false,
 			styles = {
 				floats = "transparent",
 				sidebars = "transparent",
