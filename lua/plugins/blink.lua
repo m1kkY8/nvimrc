@@ -13,7 +13,12 @@ return {
 		},
 
 		completion = {
-			list = { selection = "manual" },
+			list = {
+				selection = {
+					preselect = false,
+					auto_insert = true,
+				},
+			},
 			-- Displays a preview of the selected item on the current line
 			ghost_text = { enabled = true },
 		},
