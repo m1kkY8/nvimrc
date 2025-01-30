@@ -25,4 +25,8 @@ set("n", "N", "Nzzzv")
 set("n", "<leader>ee", "oif err != nil {<CR>}<Esc>Olog.Println(err)<Esc>")
 set("n", "<leader>ra", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
-print()
+set("i", "<C-J>", 'copilot#Accept("\\<CR>")', {
+	expr = true,
+	replace_keycodes = false,
+})
+vim.g.copilot_no_tab_map = true
