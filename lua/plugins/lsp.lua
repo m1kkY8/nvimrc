@@ -20,14 +20,12 @@ return {
 		-- since mason is removed all lsps should be added here manually
 		-- all servers need to be installed on system first in order to work
 		local servers = {
-			"gdscript",
 			"lua_ls",
 			"clangd",
 			"ts_ls",
 			"pyright",
 			"gopls",
 			"bashls",
-			"rust_analyzer",
 			"emmet_language_server",
 		}
 
