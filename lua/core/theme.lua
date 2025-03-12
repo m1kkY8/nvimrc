@@ -1,11 +1,11 @@
 local themes = {
-	"nightfox",
+	"duskfox",
 	"dayfox",
+	"nightfox",
 	"tokyonight-day",
 	"tokyonight",
 	"cyberdream",
 	"carbonfox",
 	"tokyodark",
-	"duskfox",
 }
 vim.cmd("colorscheme " .. themes[1])

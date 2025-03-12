@@ -12,6 +12,7 @@ return {
 		config = function()
 			require("nightfox").setup({
 				options = {
+					transparent = true,
 					styles = {
 						comments = "italic",
 						types = "italic,bold",
@@ -28,7 +29,7 @@ return {
 		lazy = false,
 		priority = 1000,
 		opts = {
-			transparent = false,
+			transparent = true,
 			styles = {
 				floats = "transparent",
 				sidebars = "transparent",
