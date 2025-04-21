@@ -6,13 +6,16 @@ return {
 		lazy = false,
 		priority = 1000,
 	},
+	{
+		"rebelot/kanagawa.nvim",
+	},
 
 	{
 		"EdenEast/nightfox.nvim",
 		config = function()
 			require("nightfox").setup({
 				options = {
-					transparent = true,
+					transparent = false,
 					styles = {
 						comments = "italic",
 						types = "italic,bold",
@@ -29,7 +32,7 @@ return {
 		lazy = false,
 		priority = 1000,
 		opts = {
-			transparent = true,
+			transparent = false,
 			styles = {
 				floats = "transparent",
 				sidebars = "transparent",
