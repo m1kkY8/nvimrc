@@ -4,7 +4,7 @@ return {
 		require("lint").linters_by_ft = {
 			markdown = { "vale" },
 			sh = { "shellcheck" },
-			python = { "pylint" },
+			python = { "ruff" },
 		}
 	end,
 }

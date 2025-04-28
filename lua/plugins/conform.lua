@@ -19,7 +19,7 @@ return {
 				markdown = { "prettier" },
 				graphql = { "prettier" },
 
-				python = { "black" },
+				python = { "ruff_format" },
 				lua = { "stylua" },
 				c = { "clang-format" },
 				cpp = { "clang-format" },
