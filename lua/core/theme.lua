@@ -1,12 +1,11 @@
 local themes = {
-	"nightfox",
-	"tokyonight",
 	"kanagawa-dragon",
+	"tokyonight",
+	"nightfox",
 	"kanagawa-wave",
 	"duskfox",
 	"dayfox",
 	"tokyonight-day",
-	"cyberdream",
 	"carbonfox",
 	"tokyodark",
 }

@@ -27,6 +27,9 @@ return {
 			"gopls",
 			"bashls",
 			"emmet_language_server",
+			"ansiblels",
+			"yamlls",
+			"terraformls",
 		}
 
 		local set = vim.keymap.set
