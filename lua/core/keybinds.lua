@@ -25,6 +25,9 @@ set("n", "N", "Nzzzv")
 set("n", "<leader>ee", "oif err != nil {<CR>}<Esc>Olog.Println(err)<Esc>")
 set("n", "<leader>ra", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
+vim.keymap.set("n", "<leader>h", ":Neotre toggle right<CR>", { silent = true })
+vim.keymap.set("n", "<leader>G", ":Neotre toggle float git_status <CR>", { silent = true })
+
 set("i", "<C-J>", 'copilot#Accept("\\<CR>")', {
 	expr = true,
 	replace_keycodes = false,
