@@ -1,86 +1,78 @@
 return {
-    "neovim/nvim-lspconfig",
-    dependencies = {
-        {
-            "folke/lazydev.nvim",
-            ft = "lua", -- only load on lua files
-            opts = {
-                library = {
-                    -- See the configuration section for more details
-                    -- Load luvit types when the `vim.uv` word is found
-                    { path = "${3rd}/luv/library", words = { "vim%.uv" } },
-                },
-            },
-        },
+  "mason-org/mason-lspconfig.nvim",
+  opts = {
+    ensure_installed = {
+      "yamlls",
     },
-    config = function()
-        local capabilities = require("blink.cmp").get_lsp_capabilities()
+    automatic_installation = true,
+  },
+  dependencies = {
+    { "mason-org/mason.nvim",   opts = {} },
+    { "qvalentin/helm-ls.nvim", ft = "helm" },
+    { "neovim/nvim-lspconfig" },
+    {
+      "diogo464/kubernetes.nvim",
+      opts = {
+        schema_strict = true,
+        schema_generate_always = true,
+        patch = true,
+        yamlls_root = function()
+          return vim.fs.joinpath(vim.fn.stdpath("data"), "/mason/packages/yaml-language-server/")
+        end,
+      },
+    },
+    {
+      "folke/lazydev.nvim",
+      ft = "lua",
+      opts = {
+        library = {
+          { path = "${3rd}/luv/library", words = { "vim%.uv" } },
+        },
+      },
+    },
+  },
+  config = function()
+    require("mason-lspconfig").setup({
+      automatic_enable = true,
+    })
 
-        -- :help lspconfig-all for list of avaliable lsp servers
-        -- since mason is removed all lsps should be added here manually
-        -- all servers need to be installed on system first in order to work
-        local servers = {
-            "lua_ls",
-            "clangd",
-            "ts_ls",
-            "pyright",
-            "gopls",
-            "bashls",
-            "emmet_language_server",
-            "ansiblels",
-            "yamlls",
-            "terraformls",
-            "gitlab-ci-ls"
-        }
+    local capabilities = require("blink.cmp").get_lsp_capabilities()
 
+    -- Use LspAttach to setup keymaps
+    vim.api.nvim_create_autocmd("LspAttach", {
+      callback = function(args)
+        local buf = args.buf
         local set = vim.keymap.set
+        set("n", "gd", vim.lsp.buf.definition, { buffer = buf })
+        set("n", "gI", vim.lsp.buf.implementation, { buffer = buf })
+        set("n", "K", vim.lsp.buf.hover, { buffer = buf })
+        set("n", "<leader>vws", vim.lsp.buf.workspace_symbol, { buffer = buf })
+        set("n", "<leader>vd", vim.diagnostic.open_float, { buffer = buf })
+        set("n", "<leader>vca", vim.lsp.buf.code_action, { buffer = buf })
+        set("n", "<leader>vrr", vim.lsp.buf.references, { buffer = buf })
+        set("n", "<leader>vrn", vim.lsp.buf.rename, { buffer = buf })
+      end,
+    })
 
-        set("n", "gd", function()
-            vim.lsp.buf.definition()
-        end)
-        set("n", "gI", function()
-            vim.lsp.buf.implementation()
-        end)
-        set("n", "K", function()
-            vim.lsp.buf.hover()
-        end)
-        set("n", "<leader>vws", function()
-            vim.lsp.buf.workspace_symbol()
-        end)
-        set("n", "<leader>vd", function()
-            vim.diagnostic.open_float()
-        end)
-        set("n", "<leader>vca", function()
-            vim.lsp.buf.code_action()
-        end)
-        set("n", "<leader>vrr", function()
-            vim.lsp.buf.references()
-        end)
-        set("n", "<leader>vrn", function()
-            vim.lsp.buf.rename()
-        end)
-
-        -- load all the servers
-        for _, server in ipairs(servers) do
-            require("lspconfig")[server].setup({ capabilities = capabilities })
-        end
-
-        -- LSP Configuration
-        require("lspconfig").yamlls.setup {
-            settings = {
-                yaml = {
-                    schemas = {
-                        kubernetes = "k8s-*.yaml",
-                        ["http://json.schemastore.org/github-workflow"] = ".github/workflows/*",
-                        ["http://json.schemastore.org/github-action"] = ".github/action.{yml,yaml}",
-                        ["http://json.schemastore.org/ansible-stable-2.9"] = "roles/tasks/**/*.{yml,yaml}",
-                        ["http://json.schemastore.org/prettierrc"] = ".prettierrc.{yml,yaml}",
-                        ["http://json.schemastore.org/kustomization"] = "kustomization.{yml,yaml}",
-                        ["http://json.schemastore.org/chart"] = "Chart.{yml,yaml}",
-                        ["http://json.schemastore.org/circleciconfig"] = ".circleci/**/*.{yml,yaml}",
-                    },
-                },
-            },
-        }
-    end,
+    vim.lsp.config("yamlls", {
+      settings = {
+        ["helm-ls"] = {
+          yamlls = { path = "yaml-language-server" },
+        },
+        yaml = {
+          schemas = {
+            [require("kubernetes").yamlls_schema()] = require("kubernetes").yamlls_filetypes(),
+            ["http://json.schemastore.org/github-workflow"] = ".github/workflows/*",
+            ["http://json.schemastore.org/github-action"] = ".github/action.{yml,yaml}",
+            ["http://json.schemastore.org/ansible-stable-2.9"] = "roles/tasks/**/*.{yml,yaml}",
+            ["http://json.schemastore.org/prettierrc"] = ".prettierrc.{yml,yaml}",
+            ["http://json.schemastore.org/kustomization"] = "kustomization.{yml,yaml}",
+            ["http://json.schemastore.org/chart"] = "Chart.{yml,yaml}",
+            ["http://json.schemastore.org/circleciconfig"] = ".circleci/**/*.{yml,yaml}",
+          },
+        },
+      },
+    })
+    vim.lsp.enable({ "yamlls" })
+  end,
 }
