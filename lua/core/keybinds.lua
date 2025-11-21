@@ -28,14 +28,6 @@ set("n", "<leader>ra", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 set("n", "<leader>h", ":Neotre toggle right<CR>", { silent = true })
 set("n", "<leader>G", ":Neotre toggle float git_status <CR>", { silent = true })
 
-set("i", "<C-J>", 'copilot#Accept("\\<CR>")', {
-  expr = true,
-  replace_keycodes = false,
-})
-vim.g.copilot_no_tab_map = true
-
-
-
 set("n", "<leader>T", function()
-  require("telescope.builtin").colorscheme({ enable_preview = true })
+	require("telescope.builtin").colorscheme({ enable_preview = true })
 end, { desc = "Telescope Colorschemes", silent = true })
